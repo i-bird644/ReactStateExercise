@@ -8,8 +8,17 @@ function App() {
   function handleSubmit(event) {
     
     event.preventDefault();
-    setTodoList([...todoList, inputText]);
-    setInputText("");
+    
+    const input = document.getElementById("todoInput");
+    let value = input.value.trim();
+
+    if (value !== '') {
+      
+        setTodoList([...todoList, inputText]);
+        setInputText("");      
+      
+    }
+
   }
 
   return (
